@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="venture">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+    <script src="/javascripts/angular.service.js"></script>
+    <script src="/javascripts/module.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Angular Routing Example</a>
+                </div>
+
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a ui-sref="home">Home</a>
+                    </li>
+                    <li>
+                        <a ui-sref="keyword"> keywords</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- main -->
+    <main ui-view></main>
+
+    <div style="text-align: center;" ng-show="loader">
+        <img src="/images/loader.gif" style="width: 100px" />
+    </div>
+
+</body>
+
+</html>
