@@ -11,7 +11,7 @@
                 <div class="panel-body">
                     <div>
                         <div class="img-group" ng-repeat="num in dashCtrl.list" style="display: inline-block; width: 200px;">
-                            <img src="/images/{{dashCtrl.value}}/{{num}}.jpg" class="img-responsive" alt="">
+                            <img src="/images/{{dashCtrl.value}}/{{dashCtrl.value + num}}.jpg" class="img-responsive" alt="{{dashCtrl.value + num}}.jpg">
                             <br>
                         </div>
                     </div>

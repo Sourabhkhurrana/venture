@@ -2,7 +2,7 @@
     <div>
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
-            <div class="panel" style=" box-shadow: 5px 10px 8px 10px #888888">
+            <div class="panel box-shadow">
                 <div class="panel-heading" style="text-align: center">
                     <h3 class="panel-title">Google Images</h3>
                 </div>
@@ -10,19 +10,43 @@
                     <div class="row">
                         <label class="col-md-2">Search Images</label>
                         <div class="col-md-8">
-                            <input type="text" class="form-control" ng-model="keywordName">
+                            <input type="text" class="form-control" ng-model="homeCtrl.keywordName">
                         </div>
                     </div>
                     <div class="row" style="margin-top: 10px">
                         <div class="col-md-2"></div>
                         <div class="col-md-8">
-                            <button class="btn btn-success" ng-disabled="!keywordName.length" ng-click="homeCtrl.saveKeyword()">Search</button>
+                            <button class="btn btn-success" ng-disabled="!homeCtrl.keywordName.length || homeCtrl.disableButton" ng-click="homeCtrl.saveKeyword(homeCtrl.keywordName)">Search</button>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
         <div class="col-sm-2"></div>
     </div>
 </div>  
+
+<div class="container-fluid" ng-show="homeCtrl.showImages">
+    <div class="row">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+
+            <div class="panel box-shadow">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Google Scrape {{homeCtrl.value}} Images</h3>
+                </div>
+                <div class="panel-body">
+                    <div>
+                        <div class="img-group" ng-repeat="num in homeCtrl.list" style="display: inline-block; width: 200px;">
+                            <img src="/images/{{homeCtrl.value}}/{{homeCtrl.value + num}}.jpg" class="img-responsive" alt="{{homeCtrl.value + num}}.jpg" >
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+</div>

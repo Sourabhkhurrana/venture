@@ -12,6 +12,8 @@ var config = require('./config');
 
 var app = express();
 
+global._basedir = __dirname;
+
 // view engine setup
 app.set('views', path.join(__dirname, 'public/views'));
 app.engine('html', require('ejs').renderFile);

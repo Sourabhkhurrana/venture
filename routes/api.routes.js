@@ -11,7 +11,7 @@ router.post('/saveKeyword', mainCtrl.saveKeyword);
 router.get('/getKeywordByName/:name', mainCtrl.getkeywordByName);
 
 
-router.post('/loadImagesToServer', mainCtrl.loadImagesToServer);
+//router.post('/loadImagesToServer', mainCtrl.loadImagesToServer);
 
 // get all keywords from database
 router.get('/getAllKeywords', keywordCtrl.getAllKeywords);
